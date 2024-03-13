@@ -26,8 +26,19 @@ createApp({
 
     methods:{
         addTask(){
-            this.todoList.unshift(this.newTask);
-            console.log(this.todoList);
+            if(this.newTask.text.length >= 5){
+                this.todoList.unshift(this.newTask);
+                this.newTask = {
+                    text: '',
+                    done: false
+                };
+            }else{
+                console.log('errore');
+                this.newTask = {
+                    text: '',
+                    done: false
+                };
+            }
         }
     }
 }).mount('#app');
