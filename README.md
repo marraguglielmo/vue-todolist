@@ -23,4 +23,5 @@ Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 6. se la task inserita non è lunga almeno 5 caratteri faccio comparire un messaggio di errore
 7. attraverso il click sulla task, inverto il valore della booleana `done`, facendo il toggle della classe **done**
 8. attraverso il click sull'icona del cestino, vado a fare lo `splice` della task con l'indice ottenuto con il ciclo v-for
-9. con un `v-if` verifico se la lunghezza dell'array `todoList` è uguale 0, se è vero compare un messaggio al posto della lista
+9. con un `v-if` verifico se la lunghezza dell'array `todoList` è uguale a 0, se è vero compare un messaggio al posto della lista
+10. nella funzione `deleteTask` controllo se la booleana è true, se è vero, elimino la task, altrimenti faccio comparire un messaggio di errore

@@ -44,7 +44,12 @@ createApp({
         },
 
         deleteTask(index){
-            this.todoList.splice(index, 1)
+            if(this.todoList[index].done === true){
+                this.todoList.splice(index, 1)
+                this.errorMsg=''
+            }else{
+                this.errorMsg='la task non è stata completata'
+            }
         }
     }
 }).mount('#app');
