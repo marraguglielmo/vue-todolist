@@ -40,14 +40,14 @@
     </div>
 
     <div class="task-container">
-      <ul>
+      <ul v-if="todoList.length > 0">
         <!-- ciclo l'array todoList e genero i list item -->
         <li v-for="(task, indice) in todoList" :class="{'done' : task.done === true}" @click="task.done = !task.done">
           <span>{{task.text}}</span>
           <i @click.stop="deleteTask(indice)" class="fa-solid fa-trash-can"></i>
         </li>
       </ul>
-
+      <h2 v-else>Per oggi nessuna Task</h2>
     </div>
 
 
