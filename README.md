@@ -12,3 +12,4 @@ Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
 2. con un ciclo **v-for** stampo i task nell'array `todoList`
 3. creo una variabile temporanea `newTask`
 4. con un `v-model` nell'input collego il value con la variabile temporanea
+5. al `click` del bottone o al `keyup.enter` faccio l' **unshift** di newTask dentro l'array
