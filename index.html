@@ -42,9 +42,9 @@
     <div class="task-container">
       <ul>
         <!-- ciclo l'array todoList e genero i list item -->
-        <li v-for="task in todoList" :class="{'done' : task.done === true}" @click="task.done = !task.done">
+        <li v-for="(task, indice) in todoList" :class="{'done' : task.done === true}" @click="task.done = !task.done">
           <span>{{task.text}}</span>
-          <i class="fa-solid fa-trash-can"></i>
+          <i @click.stop="deleteTask(indice)" class="fa-solid fa-trash-can"></i>
         </li>
       </ul>
 
