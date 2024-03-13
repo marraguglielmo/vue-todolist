@@ -20,7 +20,8 @@ createApp({
             newTask : {
                 text: '',
                 done: false
-            }
+            },
+            errorMsg: ''
         }
     },
 
@@ -32,8 +33,9 @@ createApp({
                     text: '',
                     done: false
                 };
+                this.errorMsg = '';
             }else{
-                console.log('errore');
+                this.errorMsg = 'Attenzione, la task deve essere lunga almeno 5 caratteri';
                 this.newTask = {
                     text: '',
                     done: false
