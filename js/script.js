@@ -16,7 +16,18 @@ createApp({
                     text: 'Completare i bonus',
                     done: false
                 }
-            ]
+            ],
+            newTask : {
+                text: '',
+                done: false
+            }
+        }
+    },
+
+    methods:{
+        addTask(){
+            this.todoList.unshift(this.newTask);
+            console.log(this.todoList);
         }
     }
 }).mount('#app');
